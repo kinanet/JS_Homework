@@ -12,7 +12,7 @@ var login,
     pass;
 
 login = prompt('Please enter the login.');
-if (login == null) {
+if (!login) {
     alert('Enter declined.');
 }
 else {
@@ -20,16 +20,16 @@ else {
         alert('I don\'t know You.');
     }
     else{
-        pass = prompt('Please enter Your password.')
+        pass = prompt('Please enter Your password.');
 
         if (pass == 'Чёрный Властелин') {
-            alert('Welcome!')
+            alert('Welcome!');
         }
-        else if (pass == null) {
+        else if (!pass) {
             alert('Enter declined.');
         }
         else {
-            alert('Incorrect password.')
+            alert('Incorrect password.');
         }
     }
 }
@@ -51,78 +51,69 @@ var lastName,
     patronymic,
     age,
     isMan,
-    isRetiree,
-    isNotValid = true;
+    isRetiree;
 
-while (isNotValid) {
+while (true) {
     lastName = prompt('Please enter last name.');
 
     if (lastName === ''){
-        isNotValid = true;
-        alert('Last name could not be empty.')
+        alert('Last name could not be empty.');
     }
-    else if (lastName === null) {
-        isNotValid = false;
+    else if (!lastName) {
         lastName = '-';
+        break;
     }
     else{
-        isNotValid = false;
+        break;
     }
 }
 
-isNotValid = true;
-while (isNotValid) {
+while (true) {
     firstName = prompt('Please enter first name.');
 
     if (firstName === ''){
-        isNotValid = true;
-        alert('First name could not be empty.')
+        alert('First name could not be empty.');
     }
-    else if (firstName === null) {
-        isNotValid = false;
+    else if (!firstName) {
         firstName = '-';
+        break;
     }
     else{
-        isNotValid = false;
+        break;
     }
 }
 
-isNotValid = true;
-while (isNotValid) {
+while (true) {
     patronymic = prompt('Please enter patronymic.');
 
     if (patronymic === ''){
-        isNotValid = true;
-        alert('Patronymic could not be empty.')
+        alert('Patronymic could not be empty.');
     }
-    else if (patronymic === null) {
-        isNotValid = false;
+    else if (!patronymic) {
         patronymic = '-';
+        break;
     }
     else{
-        isNotValid = false;
+        break;
     }
 }
 
-isNotValid = true;
-while (isNotValid) {
+while (true) {
     age = prompt('Please enter the age.');
 
     if (age === ''){
-        isNotValid = true;
-        alert('Patronymic could not be empty.')
+        alert('Age could not be empty.');
     }
     else if (+age !== +age){
-        isNotValid = true;
-        alert('Patronymic should be valid number.')
+        alert('Age should be valid number.');
     }
-    else if (age === null) {
-        isNotValid = false;
+    else if (!age) {
         age = 0;
+        break;
     }
     else{
         age = +age;
-        isNotValid = false;
+        break;
     }
 }
 
@@ -135,16 +126,4 @@ alert('Ваше ФИО: ' + lastName +' '+ firstName +' '+ patronymic +'\n'+
       'Ваш возраст в днях: ' + (age * 365) +'\n'+
       'Через 5 лет вам будет: ' + (age + 5) +'\n'+
       'Ваш пол: ' + (isMan ? 'man' : 'woman') +'\n'+
-      'Вы на пенсии: ' + (isRetiree ? 'Yes' : 'No'))
-
-
-
-
-
-
-
-
-
-
-
-
+      'Вы на пенсии: ' + (isRetiree ? 'Yes' : 'No'));
