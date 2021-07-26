@@ -27,9 +27,6 @@ for (var i = 2; i < 11; i+=2) {
     console.log(i);
 }
 
-
-
-
 // Third exercise
 var i = 0, value, arr=[], sum = 0;
 
