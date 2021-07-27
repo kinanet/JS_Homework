@@ -11,19 +11,19 @@ styles.unshift('Рэп', 'Регги')
 console.log(styles);
 
 // Second exercise
-for (var i = 2; i < 11; i++) {
+for (var i = 2; i <= 10; i++) {
     if (i%2 === 0){
         console.log(i);
     }
 }
 
-for (var i = 2; i < 11; i++) {
+for (var i = 2; i <= 10; i++) {
     if (!(i%2)){
         console.log(i);
     }
 }
 
-for (var i = 2; i < 11; i+=2) {
+for (var i = 2; i <= 10; i+=2) {
     console.log(i);
 }
 
@@ -39,13 +39,7 @@ while(true){
             continue;
         }
         else{
-            if (arr[arr.length-1] === 0){
-                alert('The last number should be not zero.');
-                continue;
-            }
-            else{
-                break;
-            }
+            break;
         }
     }
 
@@ -60,12 +54,14 @@ for (var arrayValue in arr){
 console.log('sum = ' + sum);
 
 // Fourth exercise
-var a = 10,
-    b = 2,
+var a = 2,
+    b = 10,
     isSimple;
 
 if (a>b){
-    [a,b] = [b,a];
+    var c = a;
+    a = b;
+    b = c;
 }
 
 for(a; a<=b; a++){
