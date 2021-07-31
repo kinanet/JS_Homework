@@ -47,8 +47,8 @@ while(true){
     i++;
 }
 
-for (var arrayValue in arr){
-    sum += arr[arrayValue];
+for (var arrayKey in arr){
+    sum += arr[arrayKey];
 }
 
 console.log('sum = ' + sum);
