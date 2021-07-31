@@ -4,7 +4,7 @@ var initialVariable = +prompt('Please insert initial value.', 0),
     deductible = +prompt('How much to subtract from the previous result?', 0),
     multiplier = +prompt('How much to multiply from the previous result?', 0),
     divisor = +prompt('How much to divide from the previous result?', 0);
-alert('Формула: ' + initialVariable + ' + ' + summand + ' - ' + deductible + ' * ' + multiplier + ' / ' + divisor + '.\n' +
+alert('Формула: (' + initialVariable + ' + ' + summand + ' - ' + deductible + ') * ' + multiplier + ' / ' + divisor + '.\n' +
       'Результат: ' + (((initialVariable + summand) - deductible) * multiplier / divisor));
 
 // Second exercise
@@ -36,13 +36,9 @@ else{
 // Third exercise
 var message;
 
-message = (login === 'Вася') ?
-    'Привет' :
-    (login === 'Директор') ?
-        'Здравствуйте' :
-        (login === '') ?
-            'Нет логина' :
-            '';
+message = (login === 'Вася') ? 'Привет' :
+    (login === 'Директор') ? 'Здравствуйте' :
+        (login === '') ? 'Нет логина' : '';
 
 // Fourth exercise
 var lastName,
