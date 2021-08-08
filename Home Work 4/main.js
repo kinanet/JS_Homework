@@ -82,13 +82,13 @@ function treeSum(arr) {
     var result = 0;
 
     for (var i = 0; i < arr.length; i++) {
-        var variable = +arr[i];
+        var variable = arr[i];
 
-        if (variable === +arr[i]) {
+        if (variable === +variable) {
             result += variable;
         }
-        else{
-            result += treeSum(arr[i])
+        else if(variable !== null && typeof variable == 'object' && variable.length > 0) {
+            result += treeSum(arr[i]);
         }
     }
 
