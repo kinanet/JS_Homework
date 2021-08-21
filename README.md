@@ -1,1 +1,1 @@
-# JavaScript_Course
+# JS_Homework
